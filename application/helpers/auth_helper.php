@@ -25,11 +25,11 @@ function user()
 	return $ci->db->get_where('tb_user',['id' => $ci->session->userdata('id_user')])->row();
 }
 
-function authorize($role)
+function authorize($role=[])
 {
 	$ci = get_instance(); 
-
-	if ($role != user()->role){
+	
+	if (!in_array(user()->role,$role)) {
 		redirect('Redirect/forbiden');
 	}
 }

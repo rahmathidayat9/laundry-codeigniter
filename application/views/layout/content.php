@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>CHIKALAUNDRY | <?= $title ?? 'Dashboard' ?></title>
+    <title>SHINOMIYALAUNDRY | <?= $title ?? 'Dashboard' ?></title>
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url('assets/template/backend/sb-admin-2/') ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -45,7 +45,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800"><?= $title ?? 'Dashboard' ?></h1>
+                    <h1 class="h3 mb-4 text-gray-800"><?= $title ?? '' ?></h1>
                     <?php $this->load->view($view); ?>
                 </div>
                 <!-- /.container-fluid -->

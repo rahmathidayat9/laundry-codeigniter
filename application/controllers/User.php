@@ -11,8 +11,6 @@ class User extends CI_Controller {
 
 	public function index()
 	{
-		authorize('admin');
-
 		$data = [
 			'view' 	=> 'user/index',
 			'title' => 'Dashboard', 

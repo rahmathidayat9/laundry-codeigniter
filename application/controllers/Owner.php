@@ -1,19 +1,26 @@
 <?php
-	defined('BASEPATH') OR exit('No direct script access allowed');
-	
-	class Owner extends CI_Controller {
-	
-		public function index()
-		{
-			$data = [
-				'view'  => 'owner/index',
-				'title' => 'Owner',
-			];
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-			$this->load->view('layout/content',$data);
-		}
+class Owner extends CI_Controller {
 	
+	public function __construct()
+	{
+		parent::__construct();
+		auth();
+		authorize(['owner']);
 	}
-	
-	/* End of file Owner.php */
-	/* Location: ./application/controllers/Owner.php */	
+
+	public function index()
+	{
+		$data = [
+			'view'  => 'owner/index',
+			'title' => 'Owner',
+		];
+
+		$this->load->view('layout/content',$data);
+	}
+
+}
+
+/* End of file Owner.php */
+/* Location: ./application/controllers/Owner.php */	
